@@ -1,0 +1,547 @@
+body {
+    margin: 0;
+    background: #eef1f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid #d0dbf5;
+    position: sticky;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo-img {
+    height: 58px;
+    width: auto;
+}
+
+.logo-text {
+    text-decoration: none;
+    color: #0057d9;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.logo-text:hover {
+    color: #003f9e;
+    transition: 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #003f9e;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu > li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0057d9;
+    font-weight: bold;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #d0dbf5;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 180px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0, 87, 217, 0.12);
+}
+
+.submenu:hover ul,
+.submenu ul:hover,
+.submenu a:hover + ul {
+    display: block;
+}
+
+.submenu ul li {
+    padding: 8px 15px;
+}
+
+.submenu ul li:hover {
+    background-color: #eef3ff;
+    transition: 0.2s ease-in-out;
+}
+
+.hero-tendones {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.hero-tendones h1 {
+    font-size: 42px;
+    color: #0057d9;
+    margin-bottom: 10px;
+}
+
+.hero-tendones p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.intro-tendones {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 20px 40px;
+    opacity: 0.9;
+}
+
+.bloques-tendones {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bloque {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
+    animation: fadeUp 0.5s ease-out;
+}
+
+.bloque:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.icon {
+    font-size: 40px;
+    min-width: 50px;
+}
+
+.bloque h3 {
+    margin: 0 0 6px;
+    color: #0057d9;
+}
+
+.bloque p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.seccion-detalle {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bloque-completo {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    animation: fadeUp 0.5s ease-out;
+}
+
+.bloque-completo h2 {
+    color: #0057d9;
+    font-size: 26px;
+    margin: 0 0 18px;
+}
+
+.bloque-completo h3 {
+    color: #0057d9;
+    font-size: 20px;
+    margin: 24px 0 10px;
+}
+
+.bloque-completo p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.bloque-completo ul {
+    padding-left: 20px;
+    margin-bottom: 14px;
+}
+
+.bloque-completo ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.comparison-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.comparison-item {
+    background: #f0f5ff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #0057d9;
+    transition: 0.25s ease;
+}
+
+.comparison-item:hover {
+    border-left: 6px solid #003f9e;
+    background: #e8f0ff;
+}
+
+.comparison-item h4 {
+    margin: 0 0 10px;
+    color: #0057d9;
+    font-size: 17px;
+}
+
+.comparison-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.comparison-item ul li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.exercise-card {
+    background: #f7f9fd;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #dce4f0;
+    transition: 0.25s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.exercise-card h4 {
+    color: #0057d9;
+    margin: 0 0 12px;
+    font-size: 16px;
+}
+
+.exercise-card p {
+    margin: 0 0 6px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.application-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.application-card {
+    padding: 22px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.25s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.05);
+}
+
+.striking-card {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.grappling-card {
+    background: linear-gradient(135deg, #1a5276, #2980b9);
+}
+
+.application-card h3 {
+    color: white;
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.application-card ul {
+    padding-left: 18px;
+    margin-bottom: 14px;
+}
+
+.application-card ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.exercises-mini {
+    background: rgba(255,255,255,0.2);
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.protocol-table {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.protocol-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.protocol-table th {
+    background: #0057d9;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.protocol-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e6f0;
+    font-size: 14px;
+}
+
+.protocol-table tr:nth-child(even) {
+    background: #f7f9fd;
+}
+
+.protocol-table tr:hover {
+    background: #eef3ff;
+}
+
+.tip {
+    background: #0057d9;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 50px auto 60px;
+    text-align: center;
+}
+
+.tip h3 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.tip p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #0057d9;
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-tendones {
+        padding: 50px 15px 35px;
+    }
+
+    .hero-tendones h1 {
+        font-size: 32px;
+    }
+
+    .hero-tendones p {
+        font-size: 16px;
+    }
+
+    .intro-tendones {
+        font-size: 16px;
+        max-width: 90%;
+        padding: 0 15px 30px;
+    }
+
+    .bloques-tendones {
+        padding: 0 15px;
+        max-width: 95%;
+    }
+
+    .bloque {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .seccion-detalle {
+        padding: 0 15px;
+        max-width: 95%;
+    }
+
+    .bloque-completo {
+        padding: 22px 18px;
+    }
+
+    .comparison-box {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .exercise-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .application-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .protocol-table table {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 28px 0;
+        margin-top: 40px;
+    }
+
+    footer p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul.menu {
+        gap: 20px;
+    }
+
+    .hero-tendones {
+        padding: 60px 25px 40px;
+    }
+
+    .hero-tendones h1 {
+        font-size: 38px;
+    }
+
+    .intro-tendones {
+        max-width: 85%;
+        font-size: 17px;
+    }
+
+    .bloques-tendones {
+        max-width: 85%;
+        padding: 0 25px;
+    }
+
+    .seccion-detalle {
+        max-width: 85%;
+        padding: 0 25px;
+    }
+
+    .comparison-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exercise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .application-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        padding: 22px 0;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .bloques-tendones,
+    .seccion-detalle {
+        max-width: 900px;
+    }
+
+    .exercise-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,498 @@
+body {
+    margin: 0;
+    background: #eef1f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid #d0dbf5;
+    position: sticky;
+    z-index: 1000;
+}
+
+@keyframes aparecerCard {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.disciplina-card {
+    animation: aparecerCard 0.5s ease-out;
+}
+
+.disciplina-card:hover {
+    box-shadow: 0 0 12px rgba(0, 87, 217, 0.25);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo-img {
+    height: 58px;
+    width: auto;
+}
+
+.logo-text {
+    text-decoration: none;
+    color: #0057d9;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.logo-text:hover {
+    color: #003f9e;
+    transition: 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #003f9e;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu > li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0057d9;
+    font-weight: bold;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.submenu:hover ul,
+.submenu ul:hover,
+.submenu a:hover + ul {
+    display: block;
+}
+
+.submenu ul li {
+    padding: 8px 15px;
+}
+
+.submenu ul li:hover {
+    background-color: #eef3ff;
+    transition: 0.2s ease-in-out;
+}
+
+.hero-rutinas {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.hero-rutinas h1 {
+    font-size: 42px;
+    color: #0057d9;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.hero-rutinas p {
+    font-size: 18px;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.intro-rutinas {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.intro-rutinas h2 {
+    font-size: 28px;
+    color: #0057d9;
+    margin-bottom: 10px;
+}
+
+.intro-rutinas p {
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.grid-disciplinas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1500px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.disciplina-card {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 87, 217, 0.09);
+    border-top: 3px solid #0057d9;
+    transition: 0.2s ease;
+    text-align: center;
+}
+
+.disciplina-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 87, 217, 0.15);
+}
+
+.disciplina-card .emoji {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.disciplina-card h3 {
+    color: #0057d9;
+    margin-bottom: 8px;
+}
+
+.disciplina-card p {
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.disciplina-detalle {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.disciplina-detalle h2 {
+    font-size: 30px;
+    color: #0057d9;
+    margin-bottom: 10px;
+}
+
+.disciplina-detalle .desc {
+    font-size: 17px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.bloques-rutina {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.bloque-rutina {
+    background-color: white;
+    padding: 20px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 87, 217, 0.08);
+    border-left: 4px solid #0057d9;
+}
+
+.bloque-rutina h3 {
+    color: #0057d9;
+    margin-bottom: 8px;
+}
+
+.bloque-rutina p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.bloque-rutina:hover {
+    transform: translateY(-4px);
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 87, 217, 0.15);
+    background-color: #f7faff;
+}
+
+.transferencia {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
+.niveles-rutinas {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px 40px;
+    text-align: center;
+}
+
+.niveles-rutinas h2 {
+    font-size: 28px;
+    color: #0057d9;
+    margin-bottom: 10px;
+}
+
+.niveles-rutinas p {
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.tabla-niveles table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 87, 217, 0.09);
+}
+
+.tabla-niveles th {
+    background-color: #0057d9;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.tabla-niveles td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e6f5;
+    font-size: 15px;
+}
+
+.tabla-niveles tr:last-child td {
+    border-bottom: none;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #0057d9;
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-rutinas {
+        padding: 50px 15px 40px;
+    }
+
+    .hero-rutinas h1 {
+        font-size: 32px;
+    }
+
+    .hero-rutinas p {
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 90%;
+    }
+
+    .intro-rutinas {
+        padding: 30px 15px 10px;
+    }
+
+    .intro-rutinas h2 {
+        font-size: 24px;
+    }
+
+    .intro-rutinas p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .grid-disciplinas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .disciplina-card {
+        padding: 22px 18px;
+    }
+
+    .disciplina-detalle {
+        padding: 0 15px;
+        margin: 40px auto;
+    }
+
+    .disciplina-detalle h2 {
+        font-size: 26px;
+    }
+
+    .disciplina-detalle .desc {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .bloques-rutina {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bloque-rutina {
+        padding: 18px 16px;
+    }
+
+    .niveles-rutinas {
+        padding: 0 15px 30px;
+        margin: 40px auto;
+    }
+
+    .niveles-rutinas h2 {
+        font-size: 24px;
+    }
+
+    .niveles-rutinas p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .tabla-niveles table {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 28px 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    footer p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 6px 0;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul.menu {
+        gap: 20px;
+    }
+
+    .hero-rutinas {
+        padding: 60px 25px 45px;
+    }
+
+    .hero-rutinas h1 {
+        font-size: 38px;
+    }
+
+    .hero-rutinas p {
+        font-size: 17px;
+        max-width: 85%;
+    }
+
+    .intro-rutinas {
+        padding: 40px 25px 20px;
+    }
+
+    .intro-rutinas h2 {
+        font-size: 26px;
+    }
+
+    .intro-rutinas p {
+        font-size: 17px;
+        max-width: 85%;
+    }
+
+    .grid-disciplinas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 90%;
+    }
+
+    .disciplina-detalle {
+        max-width: 85%;
+        padding: 0 25px;
+    }
+
+    .bloques-rutina {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .niveles-rutinas {
+        max-width: 85%;
+        padding: 0 25px 40px;
+    }
+
+    footer {
+        padding: 22px 0;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .grid-disciplinas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bloques-rutina {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .niveles-rutinas {
+        max-width: 900px;
+    }
+}

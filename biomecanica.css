@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    background: #eef1f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid #d0dbf5;
+    position: sticky;
+    z-index: 1000;
+}
+
+.logo-container { display: flex; align-items: center; gap: 6px; }
+.logo-img { height: 58px; width: auto; }
+.logo-text { text-decoration: none; color: #0057d9; font-weight: bold; font-size: 21px; }
+.logo-text:hover { color: #003f9e; transition: 0.2s ease-in-out; }
+
+nav a:hover { color: #003f9e; transition: 0.2s ease-in-out; }
+nav ul.menu { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+nav ul.menu > li { position: relative; }
+nav a { text-decoration: none; color: #0057d9; font-weight: bold; }
+.submenu { position: relative; }
+
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #d0dbf5;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 180px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0, 87, 217, 0.12);
+}
+
+.submenu:hover ul,
+.submenu ul:hover,
+.submenu a:hover + ul { display: block; }
+
+.submenu ul li { padding: 8px 15px; }
+.submenu ul li:hover { background-color: #eef3ff; transition: 0.2s ease-in-out; }
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #0057d9;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.seccion {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bloque {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    animation: aparecer 0.45s ease-out;
+}
+
+.bloque h2 {
+    color: #0057d9;
+    font-size: 26px;
+    margin: 0 0 18px;
+    position: relative;
+    display: inline-block;
+}
+
+
+.bloque:hover {
+    transform: translateY(-4px);
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 87, 217, 0.12);
+}
+
+.bloque p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.ejemplo,
+.aplicacion {
+    background: #f7f9fd;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #0057d9;
+    margin: 16px 0;
+}
+
+.ejemplo h4,
+.aplicacion h4 {
+    color: #0057d9;
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.lista-errores {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.error {
+    background: #fff5f5;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+.error h4 {
+    color: #e74c3c;
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.error:hover {
+    transform: translateX(6px);
+    transition: 0.25s ease-in-out;
+    background-color: #ffecec;
+}
+
+.consejo {
+    background: #0057d9;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 950px;
+    margin: 50px auto 60px;
+    text-align: center;
+}
+
+.consejo h3 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #0057d9;
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 50px 15px 35px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        max-width: 90%;
+        line-height: 1.6;
+    }
+
+    .seccion {
+        padding: 0 15px;
+        max-width: 95%;
+    }
+
+    .bloque {
+        padding: 22px 18px;
+    }
+
+    .bloque h2 {
+        font-size: 22px;
+    }
+
+    .bloque p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .ejemplo,
+    .aplicacion {
+        padding: 16px;
+    }
+
+    .lista-errores {
+        gap: 10px;
+    }
+
+    .error {
+        padding: 14px 16px;
+    }
+
+    .consejo {
+        padding: 22px 20px;
+        font-size: 15.5px;
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 28px 0;
+        margin-top: 40px;
+    }
+
+    footer p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    header {
+        padding: 15px 30px;
+    }
+
+    nav ul.menu {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 60px 25px 40px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        max-width: 85%;
+    }
+
+    .seccion {
+        max-width: 85%;
+        padding: 0 25px;
+    }
+
+    .bloque {
+        padding: 26px 24px;
+    }
+
+    .consejo {
+        padding: 25px;
+        max-width: 85%;
+    }
+
+    footer {
+        padding: 22px 0;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .seccion {
+        max-width: 950px;
+    }
+}
+
